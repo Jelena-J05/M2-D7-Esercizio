@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JobSearch</title>
+    <style>
+        body {
+            background-image: url(./background\ photo.png.jpeg);
+            background-size: cover;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        h1 {
+            margin-bottom: 60px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        input {
+            width: 300px;
+            height: 50px;
+            border-radius: 25em;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        input:placeholder-shown {
+            font-style: italic;
+        }
+
+        button {
+            border-radius: 25em;
+            width: 145px;
+            height: 50px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 18px;
+            background-color: #B5B9D6;
+        }
+
+        #results {
+            list-style-type: '➥';
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Take your career to the next level!</h1>
+        <input id="titleQuery" type="search" placeholder="Enter a job position"> <br>
+        <input id="locationQuery" type="search" placeholder="Enter your location"> <br>
+        <div>
+            <button onclick="doSearch()"> Search</button>
+            <button onclick="cancelButton();"> Cancel</button>
+        </div>
+        <ul id="results"> </ul>
+    </section>
+    <script src="D7.js"></script>
+</body>
+
+</html>
