@@ -142,17 +142,18 @@ function doSearch() {
   const data = searchJobs(titleQuery, locationQuery)
 
   const ulResults = document.querySelector('#results')
-
   for (const result of data.results) {
     const li = document.createElement('li')
     li.innerHTML = "<div><p>" + result.title + result.location + "</p><div>"
     ulResults.appendChild(li)
   }
+  return data
 }
 function cancelButton() {
   document.getElementById('titleQuery').value = '';
   document.getElementById('locationQuery').value = '';
   document.getElementById('results').innerHTML = '';
+  return data
 }
 
 
